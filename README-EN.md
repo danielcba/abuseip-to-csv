@@ -60,7 +60,7 @@ python abuseip-to-csv.py
 
 The output of the script is a `resultado.csv` file with the following format:
 ```csv
-IP Address, Number of Reports
+Dirección IP, Cantidad de Reportes
 192.168.1.1, 15
 203.0.113.5, 42
 ...
@@ -68,8 +68,8 @@ IP Address, Number of Reports
 
 Additionally, the script displays a message on the console like:
 ```
-For IP 192.168.1.1, these reports were found: 15
-For IP 203.0.113.5, these reports were found: 42
+Para la IP 192.168.1.1, tiene estos reportes: 15
+Para la IP 203.0.113.5, tiene estos reportes: 42
 ```
 
 ## AbuseIPDB Documentation
