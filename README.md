@@ -79,7 +79,7 @@ Para la IP 203.0.113.5, tiene estos reportes: 42
 - **Listado de IP bloqueadas** (`blacklist`): proporciona una lista de IP en la base de datos con altos números de reportes.
 - **Reportes de IP** (`report`): permite a los usuarios reportar una IP específica si han detectado actividad sospechosa.
 
-Para obtener más información, consulta la [documentación oficial de la API de AbuseIPDB](https://www.abuseipdb.com/docs).
+Para obtener más información, consulta la [documentación oficial de la API de AbuseIPDB](https://docs.abuseipdb.com/#introduction).
 
 ## Notas de Seguridad
 
