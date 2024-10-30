@@ -26,7 +26,7 @@ pip install requests
 1. Clona este repositorio:
    ```bash
    git clone https://github.com/danielcba/abuseip-to-csv.git
-   cd ip-checker
+   cd abuseip-to-csv
    ```
 
 2. Reemplaza la clave de API en el archivo Python con tu propia clave de AbuseIPDB. Puedes obtener una clave de API registrándote en [AbuseIPDB](https://www.abuseipdb.com/register).
@@ -92,4 +92,3 @@ api_key = os.getenv("ABUSEIPDB_API_KEY")
 ## Licencia
 
 Este proyecto está licenciado bajo la Licencia MIT - consulta el archivo [LICENSE](LICENSE) para más detalles.
-
