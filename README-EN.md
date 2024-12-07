@@ -1,6 +1,6 @@
 # IP Checker with AbuseIPDB
 
-This project uses the [AbuseIPDB API](https://www.abuseipdb.com) to query information about suspicious IP addresses and log the number of abuse reports associated with each IP in a CSV file.
+This Python script uses the [AbuseIPDB API](https://www.abuseipdb.com) to query information about suspicious IP addresses and log the number of abuse reports associated with each IP in a CSV file.
 
 ## Description
 
