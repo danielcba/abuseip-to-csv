@@ -1,16 +1,24 @@
 import requests  # Importa la biblioteca requests para realizar solicitudes HTTP
 import csv       # Importa la biblioteca csv para manipular archivos CSV
+import os        # Importa os para verificar la existencia de archivos
 
 # Definir la URL de la API de AbuseIPDB y la clave de la API para autenticación
-url = "https://api.abuseipdb.com/api/v2/check"
-# Reemplazar la clave de la API con tu propia clave de AbuseIPDB
-api_key = "you_api_key"
+url = 'https://api.abuseipdb.com/api/v2/check'
+api_key = 'you_api_key_here'
 
-# Crear el archivo CSV de salida y escribir el encabezado de las columnas
-with open('resultado.csv', mode='w', newline='') as output_file:
+# Verifica si el archivo 'resultado.csv' ya existe
+archivo_csv = 'resultado.csv'
+archivo_existe = os.path.exists(archivo_csv)
+
+# Abrir el archivo en modo 'a' (append) si existe o 'w' (write) si no existe
+modo_apertura = 'a' if archivo_existe else 'w'
+
+with open(archivo_csv, mode=modo_apertura, newline='') as output_file:
     writer = csv.writer(output_file)
-    # Escribir el encabezado de las columnas en el archivo CSV
-    writer.writerow(["Dirección IP", "Cantidad de Reportes"])
+
+    # Escribir el encabezado solo si el archivo se está creando por primera vez
+    if not archivo_existe:
+        writer.writerow(["Dirección IP", "Cantidad de Reportes"])
 
     # Leer el archivo CSV que contiene las direcciones IP para la consulta
     with open('equipos.txt') as csvfile:
@@ -40,9 +48,7 @@ with open('resultado.csv', mode='w', newline='') as output_file:
                 respuesta = response.json()
 
                 # Extraer datos relevantes de la respuesta JSON
-                # Dirección IP consultada
                 ip = respuesta['data']['ipAddress']
-                # Total de reportes para la IP
                 reportes = respuesta['data']['totalReports']
 
                 # Escribir los datos en el archivo CSV de salida
