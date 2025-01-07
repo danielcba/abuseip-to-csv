@@ -31,7 +31,7 @@ pip install requests
 
 2. Reemplaza la clave de API en el archivo Python con tu propia clave de AbuseIPDB. Puedes obtener una clave de API registrándote en [AbuseIPDB](https://www.abuseipdb.com/register).
 
-3. Asegúrate de tener un archivo `equipos.txt` en el mismo directorio con la siguiente estructura:
+3. Asegúrate de tener un archivo `equipos.csv` en el mismo directorio con la siguiente estructura:
    ```
    direcciones
    192.168.1.1
