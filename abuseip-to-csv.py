@@ -21,7 +21,7 @@ with open(archivo_csv, mode=modo_apertura, newline='') as output_file:
         writer.writerow(["Dirección IP", "Cantidad de Reportes"])
 
     # Leer el archivo CSV que contiene las direcciones IP para la consulta
-    with open('equipos.txt') as csvfile:
+    with open('equipos.csv') as csvfile:
         reader = csv.DictReader(csvfile)
         for row in reader:
             # Extrae la dirección IP de cada fila
