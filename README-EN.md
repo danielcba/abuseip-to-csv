@@ -4,7 +4,7 @@ This Python script uses the [AbuseIPDB API](https://www.abuseipdb.com) to query 
 
 ## Description
 
-The script reads a text file (`equipos.txt`) containing a list of IP addresses and queries the AbuseIPDB API to get data on the number of abuse reports recorded for each IP in the past 60 days. The results are saved in a CSV file (`resultado.csv`) with the columns:
+The script reads a text file (`equipos.csv`) containing a list of IP addresses and queries the AbuseIPDB API to get data on the number of abuse reports recorded for each IP in the past 60 days. The results are saved in a CSV file (`resultado.csv`) with the columns:
 - `IP Address`
 - `Number of Reports`
 
